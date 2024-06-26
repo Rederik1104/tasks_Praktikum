@@ -28,6 +28,11 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Search</span>
+            <input type="search" class="form-control" aria-label="Sizing example input" id="search"
+                aria-describedby="inputGroup-sizing-default">
+        </div>
 
         <div class="Todos">
             <h1>Todos:</h1>
@@ -38,7 +43,7 @@
                 ?>
                 <form action="finish.php?id=<?php echo htmlspecialchars($row['id']); ?>" method="POST" class="mb-3">
                     <div id="task_<?php echo $row['id'] ?>" class="todo-element block p-3 border rounded">
-                        <p>Task: <?php echo htmlspecialchars($row['task']); ?></p>
+                        <p id="tasK">Task: <?php echo htmlspecialchars($row['task']); ?></p>
                         <p>Created: <?php echo htmlspecialchars($row['date_created']); ?></p>
                         <p id="fDateP">Finish:<?php echo htmlspecialchars($row['date_finished']); ?></p>
                         <button type="submit" class="btn btn-success">Finish</button>
@@ -80,6 +85,7 @@
         </div>
     </div>
     <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="search.js"></script>
     <script>
         var exampleModal = document.getElementById('exampleModal')
         exampleModal.addEventListener('show.bs.modal', function (event) {
