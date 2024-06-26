@@ -41,7 +41,9 @@
             $sql = $pdo->query("SELECT * FROM todo");
             while ($row = $sql->fetch()) {
                 ?>
-                <form action="finish.php?id=<?php echo htmlspecialchars($row['id']); ?>" method="POST" class="mb-3">
+                <form
+                    action="finish.php?id=<?php echo htmlspecialchars($row['id']); ?>&finished=<?php echo htmlspecialchars($row['date_finished']) ?>"
+                    method="POST" class="mb-3">
                     <div id="task_<?php echo $row['id'] ?>" class="todo-element block p-3 border rounded">
                         <p id="tasK">Task: <?php echo htmlspecialchars($row['task']); ?></p>
                         <p>Created: <?php echo htmlspecialchars($row['date_created']); ?></p>
@@ -84,8 +86,15 @@
             </div>
         </div>
     </div>
+    <div id="chart" style="width: 800px; margin-left: 50px; margin-top:50px"><canvas id="acquisitions"></canvas></div>
+
+    <!-- <script type="module" src="dimensions.js"></script> -->
+    <!-- <script src="node_modules/chart.js/dist/chart.umd.js"></script> -->
+    <!-- <script src="./acquisitions.js"></script>
     <script type="text/javascript" src="index.js"></script>
-    <script type="text/javascript" src="search.js"></script>
+    <script type="text/javascript" src="search.js"></script> -->
+
+    <script type="module" src="./app.js"></script>
     <script>
         var exampleModal = document.getElementById('exampleModal')
         exampleModal.addEventListener('show.bs.modal', function (event) {
