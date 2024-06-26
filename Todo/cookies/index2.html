@@ -1,0 +1,10 @@
+<script>
+    function getUrlParam(name){
+        var url_String = window.location;
+        var url = new URL(url_String);
+        var c = url.searchParams.get("name");
+        return c;
+    }
+
+    console.log(getUrlParam(name));
+</script>

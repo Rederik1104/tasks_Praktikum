@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Tschenrechner</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="rechner">
+        <div class="display">
+            <p id="rechnung"></p>
+        </div>
+        <div class="buttons">
+            <div class="zahlen">
+                <button id="1" onclick="zahlen(1)">1</button>
+                <button id="2" onclick="zahlen(2)">2</button>
+                <button id="3" onclick="zahlen(3)">3</button>
+                <button id="4" onclick="zahlen(4)">4</button>
+                <button id="5" onclick="zahlen(5)">5</button>
+                <button id="6" onclick="zahlen(6)">6</button>
+                <button id="7" onclick="zahlen(7)">7</button>
+                <button id="8" onclick="zahlen(8)">8</button>
+                <button id="9" onclick="zahlen(9)">9</button>
+                <button id="del" onclick="del()">DEL</button>
+                <button id="0" onclick="zahlen(0)">0</button>
+                <button style="align-items: center; line-height: 0;" onclick="submit()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
+                    </svg>
+                </button>
+                <button id="ac" onclick="ac()">AC</button>
+            </div>
+            <div class="rechenoperatoren">
+                <button onclick="zahlen('+')">+</button>
+                <button onclick="zahlen('-')">-</button>
+                <button onclick="zahlen('*')">*</button>
+                <button onclick="zahlen('/')">/</button>
+                <button onclick="zahlen('.')">,</button>
+            </div>
+            
+        </div>
+        <div class="runden">
+            <input id="round" type="range" min="1" max="10" value="5" onchange="valueR()">
+            <label for="round" id="lRound">5 (Nachkommastellen runden)</label>
+        </div>
+    </div>
+    
+    
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
