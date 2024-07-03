@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+}
+
+#events-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.event {
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.event h2 {
+    margin: 0 0 0.5rem 0;
+}
+
+.event p {
+    margin: 0.5rem 0 0 0;
+}
+#back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+#back-button a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #007bff; /* Link-Farbe anpassen */
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid #007bff; /* Rahmenfarbe anpassen */
+    border-radius: 5px; /* Eckenradius anpassen */
+    transition: all 0.3s ease;
+}
+
+#back-button a:hover {
+    background-color: #007bff; /* Hintergrundfarbe bei Hover anpassen */
+    color: white; /* Textfarbe bei Hover anpassen */
+}
+
+#back-button svg {
+    margin-right: 10px;
+}
+#delete, #change {
+    background-color: #007bff; /* Farbe für den "Change"-Button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    margin-right: 5px; /* Abstand zwischen den Buttons */
+}
+
+#delete {
+    background-color: #dc3545; /* Farbe für den "Delete"-Button */
+}
+
+#delete:hover, #change:hover {
+    background-color: #0056b3; /* Dunklere Farbe für den "Change"-Button beim Hover */
+}
+
+#delete:hover {
+    background-color: #c82333; /* Dunklere Farbe für den "Delete"-Button beim Hover */
+}
+
+#delete:active, #change:active {
+    background-color: #004085; /* Noch dunklere Farbe für den "Change"-Button beim Klicken */
+}
+
+#delete:active {
+    background-color: #bd2130; /* Noch dunklere Farbe für den "Delete"-Button beim Klicken */
+}
+/* Modal Styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .styled-button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+  
+
