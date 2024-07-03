@@ -1,0 +1,38 @@
+:root{
+    --width: 
+}
+.rechner{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex: 1 1 auto;
+}
+.zahlen{
+    display: grid;
+    grid-template-columns: repeat(3, 3rem);
+}
+button{
+    min-height: 2rem;
+}
+.rechenoperatoren{
+    display: flex;
+    flex-direction: column;
+}
+.display{
+    min-height: 1.5rem;
+    border: 3px solid gray;
+    border-radius: 7px;
+    width: 12.3%;
+}
+.runden{
+    display: flex;
+    flex-direction: column;
+}
+.runden input{
+    width: 12.3%;
+}

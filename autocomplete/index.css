@@ -1,0 +1,11 @@
+.autoC{
+    width: 200px;
+    max-height: 150px;
+    overflow-y: scroll;
+    
+}
+body{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
